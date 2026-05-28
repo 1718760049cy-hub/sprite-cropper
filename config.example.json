@@ -1,0 +1,17 @@
+{
+  "output_width": 1280,
+  "output_height": 1280,
+  "face_zone_x": 460,
+  "face_zone_y": 250,
+  "face_zone_w": 360,
+  "face_zone_h": 420,
+  "sharpen_amount": 0.9,
+  "detection_mode": "opencv",
+  "last_input_folder": "",
+  "last_output_folder": "",
+  "bg_layer_patterns": "背景,bg,background,底色,底图,灰色,灰底,back",
+  "wm_layer_patterns": "水印,watermark,logo,版权,标",
+  "template_match_threshold": 0.7,
+  "appearance_mode": "dark",
+  "color_theme": "blue"
+}
