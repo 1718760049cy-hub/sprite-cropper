@@ -6,17 +6,16 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)
 
-## ✨ 功能
+##  功能说明
+- 支持已经裁剪好的图片作为预设模板导入
+- 支持 PSD / PNG 批量导入
+- OpenCV cascade项目检测立绘脸部
+- 可以单独检查哪张立绘的脸部并且进行微调
+- 脸部定位 → 等比缩放 → 输出固定尺寸
+- PS 智能锐化（最后一步，可跳过）
+- PSD 自动隐藏背景图层和水印图层后导出 PNG（可能不准确）但是识别背景灰底满准确，前景的字我不清楚
 
-- 📁 支持 PSD / PNG 批量导入
-- 🔍 动漫脸部自动检测（OpenCV cascade）
-- ✏️ 预览每张图的脸部检测结果，可手动微调
-- ✂️ 纯 Python 裁剪：脸部定位 → 等比缩放 → 输出固定尺寸
-- 🎨 PS 智能锐化（最后一步，可跳过）
-- 📐 预设管理：从已有的成品 PNG 一键导入脸部位置
-- 🔲 PSD 自动隐藏背景图层和水印图层后导出 PNG
-
-## 📸 界面预览
+##  界面预览
 
 启动后你会看到：
 
@@ -26,7 +25,7 @@
 - **左侧**：文件列表（带检测状态标记）
 - **右侧**：预览窗口（脸部框可手动调整）
 
-## 🚀 快速开始
+##  快速开始
 
 ### 环境要求
 
@@ -49,7 +48,7 @@ python --version
 ### 2. 下载项目
 
 ```bash
-git clone https://github.com/你的用户名/sprite-cropper.git
+git clone [https://github.com/1718760049cy-hub/sprite-cropper.git]
 cd sprite-cropper
 ```
 
@@ -79,8 +78,8 @@ pip install opencv-python-headless
 python main.py
 ```
 
-## 📖 使用流程
-
+##  使用流程
+前置：人工在裁剪一个标准的立绘文件作为后续的裁剪出图标准png文件，尺寸脸部位置均按照个人喜好，作为预设，导入软件预设中。
 1. **选文件夹**：点击「浏览」选择包含立绘 PSD/PNG 的目录
 2. **导 PSD**（如有 PSD 文件）：点「导出 PSD→PNG」，程序会通过 PS 自动隐藏背景/水印图层并导出为 PNG
 3. **脸部检测**：点「批量脸部检测」，程序自动识别每张图的脸部位置
@@ -88,7 +87,7 @@ python main.py
 5. **Python 裁剪**：点按钮，选输出目录，程序按预设尺寸缩放定位裁出
 6. **PS 锐化（可选）**：对裁剪后的 PNG 做智能锐化，需要 Photoshop 运行中
 
-## 🔧 预设说明
+##  预设说明
 
 预设决定了输出画布尺寸和脸部在画布中的目标位置。
 
@@ -97,7 +96,7 @@ python main.py
 
 预设保存在 `presets.json`，可以手动编辑。
 
-## 📁 项目结构
+##  项目结构
 
 ```
 sprite_cropper/
@@ -117,7 +116,7 @@ sprite_cropper/
 
 > `face_detector.py` 和 `file_manager.py` 包含了更完整的模块化设计（含模板匹配、手动标点、文件分组等功能），目前主程序尚未完全接入，这些是后续版本重构的基础设施。
 
-## 🐛 常见问题
+##  常见问题
 
 ### 脸部检测不到？
 
@@ -140,7 +139,7 @@ sprite_cropper/
 
 在 `config.json` 中修改 `bg_layer_patterns` 和 `wm_layer_patterns`，添加你自己 PSD 中背景图层和水印图层的命名关键词。
 
-## 🗺️ 路线图
+##  路线图
 
 - [ ] 将 `face_detector.py` 和 `file_manager.py` 完全接入主程序
 - [ ] 支持更多输出格式（WebP、JPG）
@@ -148,11 +147,11 @@ sprite_cropper/
 - [ ] 多语言支持（English UI）
 - [ ] 打包为 exe 独立运行
 
-## 📄 许可证
+##  许可证
 
 MIT License · 详见 [LICENSE](LICENSE)
 
-## 🙏 致谢
+##  致谢
 
 - 动漫脸部检测模型来自 [nagadomi/lbpcascade_animeface](https://github.com/nagadomi/lbpcascade_animeface)
 - GUI 框架：[customtkinter](https://github.com/TomSchimansky/CustomTkinter)
