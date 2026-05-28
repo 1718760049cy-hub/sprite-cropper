@@ -139,13 +139,6 @@ sprite_cropper/
 
 在 `config.json` 中修改 `bg_layer_patterns` 和 `wm_layer_patterns`，添加你自己 PSD 中背景图层和水印图层的命名关键词。
 
-##  路线图
-
-- [ ] 将 `face_detector.py` 和 `file_manager.py` 完全接入主程序
-- [ ] 支持更多输出格式（WebP、JPG）
-- [ ] 批量处理进度可暂停/恢复
-- [ ] 多语言支持（English UI）
-- [ ] 打包为 exe 独立运行
 
 ##  许可证
 
